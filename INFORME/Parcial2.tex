@@ -1,0 +1,295 @@
+%% -------------------------------------------------------------------------------------
+% This is a general template file for preparing an article for Revista Colombiana de Estadística
+% *************************************************************************************
+\documentclass[english]{revcoles}
+\usepackage[top=1.5cm,bottom=1.5cm,left=3cm,right=3cm]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+%
+\hyphenation{}
+% //// --------------------------------------------------------------------------------
+\begin{document}
+
+\title[maintitle = Parcial 2,
+]
+
+\begin{authors}
+\author[firstname = Kevin,
+        surname = García,
+        numberinstitution = 1,
+        code= 1533173,
+        affiliation = Universidad del Valle,
+        email = kevin.chica@correounivalle.edu.co]
+\author[firstname = Alejandro,
+        surname = Vargas,
+        numberinstitution = 1,
+        code= 1525953,
+        affiliation = Universidad del Valle,
+        email = jose.alejandro.vargas@correounivalle.edu.co]
+\author[firstname = Alejandro,
+        surname = Soto,
+        numberinstitution = 1,
+        code= 1532457,
+        affiliation = Universidad del Valle,
+        email = asotomurillo@gmail.com]
+
+\end{authors}
+%
+\begin{institutions}
+     \institute[subdivision = Departamento de estadística,
+                institution = Universidad del Valle,
+                city = Cali,
+                country = Colombia]
+\end{institutions}
+
+\section{Punto 1}
+
+En una planta de potabilización de agua se desea controlar el contenido de plomo (partes por millón) en agua, para ello se ha pensado en construir un gráfico de control, con la estrategia de revisar diariamente a través de la toma de una muestra de 5 unidades. Los resultados se muestran a continuación:
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.7]{FigurasUV/Datos.png}
+  \caption{Datos del problema}
+\end{figure}
+
+\begin{itemize}
+\item[a.] Construir un gráfico de control X-barra; R con niveles de significancia del 5\% y del 0.27\%.
+
+Los dos gráficos de control iniciales $\bar{x} - R$, para los niveles de significancia dados son:
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.65]{FigurasUV/xbarra1.png}
+  \caption{Gráfico de control inicial $\bar{x} - R$ para $\alpha=0.0027$}
+\end{figure}
+\pagebreak
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.65]{FigurasUV/xbarra2.png}
+  \caption{Gráfico de control inicial $\bar{x} - R$ para $\alpha=0.05$}
+\end{figure}
+
+Podemos observar que en el gráfico $\bar{x} - R$ para $\alpha=0.05$, tenemos tres puntos por fuera de los límites control, la muestra 16 en el de la media y las muestras 2 y 28 en el del rango, estos se deben eliminar para establecer el gráfico. El gráfico de control luego de eliminar estos dos puntos es:
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.65]{FigurasUV/xbarra3.png}
+  \caption{Gráfico de control depurado $\bar{x} - R$ para $\alpha=0.05$}
+\end{figure}
+
+Se puede notar que el gráfico con un nivel de significancia $\alpha=0.05$, genera limites más estrictos(estrechos) que su comparativo con $\alpha=0.0027$.
+
+\item[b.] Simule 1000 subgrupos bajo control, desde la distribución normal y evalué la significancia de forma empírica para cada gráfico.
+\end{itemize}
+
+\section{Punto 2}
+
+Para controlar el volumen de llenado de un proceso de envasado se ha construido un gráfico de control para el centramiento, obteniendo como resultado LSC= 1015; LIC= 995. Este gráfico de control ha sido construido con un probabilidad de error tipo I equivalente a 0.6\%. Este proceso debe cumplir con un volumen de llenado nominal de 1000 cc con tolerancia de $\pm$ 30 ml. Haciendo uso de las observaciones con las que este gráfico de control fue implementado, el controlador de calidad de dicho proceso ha realizado el correspondiente análisis de capacidad, reportando un índice Cpk=0,9348.
+
+\begin{itemize}
+\item[a.] Calcular los límites de control para el grafico S. (mantener el mismo nivel de error tipo I y el mismo tamaño de muestra)
+
+\item[b.]
+
+\item[c.]
+
+\item[d.]
+
+\end{itemize}
+
+
+
+\section{Instalación del gráfico}
+\textbf{a.} Determine qué tipo de gráfico es más adecuado para este proceso de producción, $\bar{x} - R$ o $\bar{x} - S$.
+
+Utilizamos un gráfico de control tipo $\bar{x} - R$ ya que este es recomendado para muestras de tamaño 4 o 5 y para 30 mediciones o más, y en este caso presentamos 36 mediciones cada una con 4 muestras.
+
+\textbf{b.} Construya un gráfico de control para este proceso, bajo un nivel de significancia de 0.0027 y bajo un nivel de significancia del 0.05.
+
+Se realizaron dos gráficos de control iniciales $\bar{x} - R$, para los niveles de significancia dados:
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.65]{FigurasUV/xbarra2.png}
+  \caption{Gráfico de control inicial $\bar{x} - S$ para $\alpha=0.0027$}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{FigurasUV/xbarra1.png}
+  \caption{Gráfico de control inicial $\bar{x} - S$ para $\alpha=0.05$}
+\end{figure}
+
+\pagebreak
+Se puede notar que el gráfico con un nivel de significancia $\alpha=0.05$, genera limites más estrictos y por lo tanto, detecta más puntos por fuera de control que el gráfico con $\alpha=0.0027$.
+
+Como los gráficos de control iniciales presentan puntos fuera de los limites de control, se debe eliminar dichos puntos de cada uno para establecer el gráfico.
+
+Los gráficos de control depurados, luego de eliminar las muestras cuyos puntos estaban fuera de control son:
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{FigurasUV/xbarra3.png}
+  \caption{Gráfico de control $\bar{x} - S$ para $\alpha=0.0027$}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{FigurasUV/xbarra4.png}
+  \caption{Gráfico de control $\bar{x} - S$ para $\alpha=0.05$}
+\end{figure}
+~\\En estos gráficos finales se nota lo mencionado anteriormente, el gráfico de control con un nivel de significancia $\alpha=0.05$ tiene unos limites de control más estrictos.
+
+\textbf{c.} Estime el centramiento del proceso y su desviación estándar.
+
+El centramiento del proceso y su desviación estándar para cada nivel de significancia, están dados en la siguiente tabla:
+~\\Teniendo en cuenta que la constante $A_2=0.729$ para $n=4$, entonces:
+
+\begin{table}[htbp]
+\centering
+\caption{Centramiento y desviación estándar del proceso}
+\begin{tabular}{|c|c|c|}
+\hline 
+Nivel de significancia $\alpha$ & $\mu_{\bar{x}}=\bar{\bar{X}}$ & $\sigma_{\bar{x}}=\frac{A_2 \bar{R}}{3}$ \\ 
+\hline 
+0.0027 & 9.993 & 0.417 \\ 
+\hline 
+0.05 & 9.987 & 0.4165 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+En estos dos indicadores no se notan muchas diferencias entre los gráficos de control, el centramiento y la desviación estándar del proceso difieren muy poco, y esta diferencia no se debe a los gráficos de control como tal, sino a los datos que se tienen. Como se eliminaron datos diferentes en cada caso para establecer el gráfico, esto es lo que causa esas diferencias mínimas.
+
+\textbf{d.} Construya la curva característica de operación para cada K y compárelas. ¿Qué puede decir al respecto?
+~\\Para construir estas curvas de operación, se calcularon las probabilidades de no detectar un cambio dado que el proceso está fuera de control, para diferentes magnitudes de cambio $r$ de 0 a 3\%. Estas probabilidades se calcularon mediante:
+$$\beta=P(No \;\; detectar \;\; un \;\; cambio | Fuera \;\; de \;\; control)$$ 
+$$\beta_r=P(Z<k-r\sqrt{n})-P(Z<-k-r\sqrt{n})$$
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{FigurasUV/CO.png}
+  \caption{Curva característica de operación($\beta_r$) para cada K}
+\end{figure}
+
+Para realizar más fácil la interpretación, se obtuvo y se graficó $1-\beta_r$ que es la probabilidad de detectar el cambio, dado que el proceso está fuera de control.
+
+Se puede notar que en todos los casos las probabilidades de detectar el cambio, para diferentes magnitudes $r$ es mayor con el gráfico de control con $\alpha=0.05$, esto se debe a que este gráfico genera limites de control más estrictos,  por lo tanto, detectará más cambios en todas las magnitudes que el gráfico con $\alpha=0.0027$.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{FigurasUV/CO1.png}
+  \caption{Curva característica de operación($1-\beta_r$) para cada K}
+\end{figure}
+
+\pagebreak
+\section{Condiciones de operación del gráfico}
+Para ambos gráficos construidos ($\alpha=0.0027$ y $\alpha=0.05$) de respuesta a los siguientes ítems:
+
+\textbf{e.} ¿Qué probabilidad existe de que el gráfico detecte un cambio en la media de proceso de 1,4\% hacia arriba?
+
+Para calcular la probabilidad de que el gráfico detecte un cambio en la media del proceso de una magnitud de 1.4\%, debemos calcular:
+$$\beta=P(No \;\; detectar \;\; un \;\; cambio | Fuera \;\; de \;\; control)$$
+$$\beta_r=P(Z<k-r\sqrt{n})-P(Z<-k-r\sqrt{n})$$
+
+Nos están dando la magnitud del cambio $r=1.4\%$, y tenemos que para $\alpha=0.0027$, $k=3$, y para $\alpha=0.05$, $k=1.96$. Por lo tanto:
+
+Para $\alpha=0.0027$:
+$$\beta_{1.4}=P(Z<3-1.4\cdot 2)-P(Z<-3-1.4\cdot 2)=0.57926-0=0.57926$$ 
+
+Para $\alpha=0.05$:
+$$\beta_{1.4}=P(Z<1.96-1.4\cdot 2)-P(Z<-1.96-1.4\cdot 2)=0.20045-0=0.20045$$ 
+
+La probabilidad de detectar el cambio en cada caso será $1-\beta_r$, están dadas en la siguiente tabla:
+\begin{table}[htbp]
+\centering
+\caption{Probabilidad de detectar un cambio en la media de 1.4\%}
+\begin{tabular}{|c|c|c|}
+\hline 
+$r$ & $\alpha=0.0027$ & $\alpha=0.05$ \\ 
+\hline 
+1.4 & 0.4207 & 0.7995 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+
+Como se puede ver en la tabla, la probabilidad para detectar un cambio con una magnitud de 1.4\% es mucho mayor para el $\alpha=0.05$, es lógico, ya que cuando se tiene limites de control más estrechos con respecto a la media, será más fácil detectar posibles desviaciones.
+
+
+\textbf{f.} ¿Qué probabilidad existe de que este cambio tan solo sea detectado en la cuarta muestra posterior a la ocurrencia del cambio?
+
+La probabilidad que existe de que el cambio sea detectado solo hasta la cuarta muestra después de que ocurrió, está dado por:
+
+$$ \beta_{r}^{4}*(1-\beta_{r})$$
+
+Donde $$\beta_{r}=Pr(No\;detectar\;un\;cambio|Está\;fuera\;de\;control)$$  
+$$(1-\beta_{r})=Pr(Detectar\;un\;cambio|Está\;fuera\;de\;control)$$
+
+\pagebreak
+Así que, con los valores de $\beta_r$ (0.57926 y 0.20045 para $\alpha=0.0027$ y $\alpha=0.05$, respectivamente), encontrados en el literal anterior, tenemos que las probabilidades para cada gráfico de control son:
+
+\begin{table}[htbp]
+\centering
+\caption{Probabilidad de detectar el cambio solo hasta la cuarta muestra}
+\begin{tabular}{|c|c|}
+\hline 
+Nivel de significancia & Pr \\ 
+\hline 
+$\alpha=0.0027$ & 0.04737 \\ 
+\hline 
+$\alpha=0.05$ & 0.00129 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+
+Como se mostró anteriormente, la probabilidad de que un gráfico detecte un cambio de determinada magnitud, en este caso del 1.4\%, es mucho mayor para el gráfico con $\alpha=0.05$ que el gráfico con $\alpha=0.0027$, por lo tanto el gráfico de control con un $\alpha=0.05$ presenta una probabilidad más baja para detectar un cambio tan lejano(cuarta muestra posterior a la aparición del cambio); ya que es más probable que lo detecte rápidamente.
+
+\textbf{g.} ¿Cuál es el número de muestras que se esperan transcurran para que el gráfico detecte el cambio?
+
+El número de muestras que se espera transcurran para que el gráfico detecte el cambio, se calcula mediante:
+$$ARL_r=\frac{1}{1-\beta_r}$$
+
+Como ya se calcularon las probabilidades $1-\beta_{1.4}$ para cada $\alpha$, tenemos los resultados en la siguiente tabla:
+\begin{table}[htbp]
+\centering
+\caption{Frecuencia promedio de detección de cambio en la media de 1.4\%}
+\begin{tabular}{|c|c|c|}
+\hline 
+$r$ & $\alpha=0.0027$ & $\alpha=0.05$ \\ 
+\hline 
+1.4 & 2.377 & 1.251 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+
+Podemos ver cómo lo que se mencionó en ítems anteriores se cumple, y es que limites más amplios se van a demorar más en detectar cambios, en este caso la diferencia entre $\alpha=0.0027$ y un $\alpha=0.05$ es de más de una muestra de diferencia y esto en procesos de fabricación en los que cada objeto tiene un costo muy alto, puede ser mucho tiempo para la intervención del proceso.
+
+\textbf{h.} ¿Cuál es el número de muestras que se esperan transcurran para el que el gráfico emita una falsa alarma?
+
+El número de muestras que se esperan transcurran hasta que el gráfico emita una falsa alarma se puede calcular mediante:
+$$ARL_r=\frac{1}{\alpha}$$
+
+~\\Los resultados se encuentran en la siguiente tabla:
+
+\begin{table}[htbp]
+\centering
+\caption{Frecuencia promedio de aparición de falsas alarmas}
+\begin{tabular}{|c|c|}
+\hline 
+ $\alpha=0.0027$ & $\alpha=0.05$ \\ 
+\hline 
+ 370.37 & 20 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+
+Era de esperarse que limites más estrechos produjeran falsas alarmas más seguido, pues será mucho más sensible ante cambios pequeños del proceso. En este caso, la diferencia entre uno y otro es muy marcada, y tener falsas alarmas podría afectar la producción, ya que se estaría deteniendo el proceso sin motivo alguno, aunque también implica que se harán controles más seguidos. Si se ve desde el punto de vista de la productividad, esto puede ser negativo, pero si se ve desde el punto de vista de la calidad, es positivo, ya que se estará monitoreando muy seguido el proceso.
+
+\section{Conclusión}
+En términos generales, y teniendo en cuenta todas las probabilidades e indicadores calculados, se puede decir que el gráfico de control con $\alpha=0.05$ es mejor, ya que este detecta cambios más pequeños y de manera más constante que el gráfico de control con $\alpha=0.0027$, sin embargo, en la elección del gráfico a utilizar también se debe tener en cuenta el contexto (producto, costos, etc.), para ver si se puede ser estrictos o si por el contrario, se debe ser más flexible en el gráfico.
+
+
+
+    \bibliography{references}
+
+
+    \appendix% !don't modify this line¡
+
+
+
+
+
+
+\end{document}
+
