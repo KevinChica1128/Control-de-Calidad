@@ -85,13 +85,19 @@ Se puede notar que el gráfico con un nivel de significancia $\alpha=0.05$, gener
 Para controlar el volumen de llenado de un proceso de envasado se ha construido un gráfico de control para el centramiento, obteniendo como resultado LSC= 1015; LIC= 995. Este gráfico de control ha sido construido con un probabilidad de error tipo I equivalente a 0.6\%. Este proceso debe cumplir con un volumen de llenado nominal de 1000 cc con tolerancia de $\pm$ 30 ml. Haciendo uso de las observaciones con las que este gráfico de control fue implementado, el controlador de calidad de dicho proceso ha realizado el correspondiente análisis de capacidad, reportando un índice Cpk=0,9348.
 
 \begin{itemize}
-\item[a.] Calcular los límites de control para el grafico S. (mantener el mismo nivel de error tipo I y el mismo tamaño de muestra)
+\item[a.] Calcular los límites de control para el gráfico S. (mantener el mismo nivel de error tipo I y el mismo tamaño de muestra)
 
-\item[b.]
+\item[b.] Construir y comentar la curva característica de operación para el gráfico X barra asociado y su curva ARL. (evaluar en el rango 0 - 3.5 desviaciones estándar)
 
-\item[c.]
+~\\Para construir la curva de operación, se calcularon las probabilidades de no detectar un cambio dado que el proceso está fuera de control, para diferentes magnitudes de cambio $r$ de 0 a 3.5\%. Estas probabilidades se calcularon mediante:
+$$\beta=P(No \;\; detectar \;\; un \;\; cambio | Fuera \;\; de \;\; control)$$ 
+$$\beta_r=P(Z<k-r\sqrt{n})-P(Z<-k-r\sqrt{n})$$
 
-\item[d.]
+
+
+\item[c.] En determinado momento el proceso de llenado comienza a envasar botellas con un promedio de 984 cc. Evalué la probabilidad de que el gráfico detecte este cambio antes de 3 inspecciones.
+
+\item[d.] Si se presenta un cambio como el enunciado en c, cuál sería el porcentaje de unidades no conformes que se producirían?, cuál sería el nuevo valor Cpk y Cp.
 
 \end{itemize}
 
