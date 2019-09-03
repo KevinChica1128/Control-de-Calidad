@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.2)  2 SEP 2019 10:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.2)  3 SEP 2019 00:21
 entering extended mode
 **./Parcial2.tex
 (Parcial2.tex
@@ -472,42 +472,66 @@ File: FigurasUV/xbarra3.png Graphic file (type png)
 <use FigurasUV/xbarra3.png>
 Package pdftex.def Info: FigurasUV/xbarra3.png  used on input line 74.
 (pdftex.def)             Requested size: 270.57567pt x 178.5978pt.
- [2 <./FigurasUV/xbarra2.png (PNG copy)> <./FigurasUV/xbarra3.png (PNG copy)>]
+ [2 <./FigurasUV/xbarra2.png (PNG copy)> <./FigurasUV/xbarra3.png (PNG copy)>] 
+[3]
+<FigurasUV/CO.png, id=38, 474.27188pt x 286.06876pt>
+File: FigurasUV/CO.png Graphic file (type png)
+<use FigurasUV/CO.png>
+Package pdftex.def Info: FigurasUV/CO.png  used on input line 170.
+(pdftex.def)             Requested size: 284.56532pt x 171.64258pt.
+<FigurasUV/CO1.png, id=39, 473.51906pt x 289.08pt>
+File: FigurasUV/CO1.png Graphic file (type png)
+<use FigurasUV/CO1.png>
+Package pdftex.def Info: FigurasUV/CO1.png  used on input line 178.
+(pdftex.def)             Requested size: 284.11362pt x 173.44933pt.
+<FigurasUV/ARL.png, id=40, 404.26031pt x 254.45062pt>
+File: FigurasUV/ARL.png Graphic file (type png)
+<use FigurasUV/ARL.png>
+Package pdftex.def Info: FigurasUV/ARL.png  used on input line 193.
+(pdftex.def)             Requested size: 242.55806pt x 152.67154pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 No file Parcial2.bbl.
-[3] (Parcial2.aux) ) 
+[4 <./FigurasUV/CO.png> <./FigurasUV/CO1.png>] [5 <./FigurasUV/ARL.png>]
+(Parcial2.aux) ) 
 Here is how much of TeX's memory you used:
- 5579 strings out of 492946
- 79102 string characters out of 3135510
- 162142 words of memory out of 3000000
- 9341 multiletter control sequences out of 15000+200000
+ 5594 strings out of 492946
+ 79379 string characters out of 3135510
+ 166142 words of memory out of 3000000
+ 9353 multiletter control sequences out of 15000+200000
  20250 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,8n,40p,617b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/lj
-four/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\KEVINSTEVEN\AppD
-ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\
-KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc090
-0.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
-c/dpi600\ecrm1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/l
-jfour/jknappen/ec/dpi600\eccc0800.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTe
-X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\KEVINSTEVEN\App
-Data\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1000.pk> <C:\Users
-\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx14
-40.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecrm0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecbx0900.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on Parcial2.pdf (3 pages, 222418 bytes).
+ 43i,8n,40p,617b,407s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9
+\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\KEVINSTEVEN\AppData\
+Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\KEVI
+NSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc0900.pk
+> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dp
+i600\ecrm1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/jknappen/ec/dpi600\eccc0800.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.
+9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\KEVINSTEVEN\AppData
+\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1000.pk> <C:\Users\KEV
+INSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.p
+k> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecrm0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecbx0900.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on Parcial2.pdf (5 pages, 293165 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
+ 361 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

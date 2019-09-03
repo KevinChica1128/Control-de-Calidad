@@ -87,13 +87,112 @@ Para controlar el volumen de llenado de un proceso de envasado se ha construido 
 \begin{itemize}
 \item[a.] Calcular los límites de control para el gráfico S. (mantener el mismo nivel de error tipo I y el mismo tamaño de muestra)
 
+La información dada es: 
+\begin{center}
+$LIC=995$ (Limite de control inferior)
+
+$LSC=1015$ (Limite de control superior)
+
+$LIE=970$ (Limite inferior especificado)
+
+$LSE=1030$ (Limite superior especificado)
+
+$\mu=1000$
+
+$\alpha=0.006$
+
+$Cpk=0.9348$
+
+\end{center}
+A partir de esto, debemos hallar $n$ y $\bar{S}$ para poder construir el gráfico $S$.
+
+Tenemos el siguiente sistema de ecuaciones, teniendo en cuenta que $\alpha=0.006$, entonces $k=2.75$:
+
+\begin{center}
+$995=\bar{\bar{X}}+2.75\frac{\sigma}{\sqrt{n}} \;\;\;\; (1)$
+
+$1015=\bar{\bar{X}}-2.75\frac{\sigma}{\sqrt{n}} \;\;\;\; (2)$
+
+$LC=\bar{\bar{X}}$
+
+\end{center}
+
+Sumando (1) y (2) tenemos:
+\begin{center}
+$2010=2\bar{\bar{X}}$
+
+$\bar{\bar{X}}=1005$
+\end{center}
+
+También sabemos que 
+
+$$C_{pk}=Min(C_{pu},C_{pl})$$
+
+Donde:
+$$C_{pu}=\frac{LSE-\mu}{3\sigma}$$
+
+$$C_{pl}=\frac{\mu-LIE}{3\sigma}$$
+
+En este caso $C_{pk}=C_{pu}$, ya que analizando los numeradores $LSE-\mu=25 < \mu-LIE=35$, por tanto $Min(C_{pu},C_{pl})=C_{pu}$
+
+Como ya conocemos el valor de $C_{pk}$:
+
+$$0.9348=\frac{1030-1005}{3\sigma} \;\;\; \rightarrow \;\;\; 2.8044\sigma=25 \;\;\; \rightarrow \;\;\; \hat{\sigma}=\frac{25}{2.8044}=8.9145 $$
+
+Reemplazando $\hat{\sigma}=8.9145$ en (1), obtenemos n:
+
+$$1015=1005+2.75\frac{8.9145}{\sqrt{n}} \;\;\; \rightarrow \;\;\; \sqrt{n}=2.4515 \;\;\; \rightarrow \;\;\; n=6$$
+
+Dado que según Montgomery, se puede trabajar $\hat{\sigma}= \bar{S}/c4$ , ya que la varianza del proceso es desconocida. Y ya sabemos que $n=6$, entonces $c4$ de acuerdo a las tablas tabuladas es igual a 0.9515, entonces, reemplazando:
+
+$$8.9145=\frac{\bar{S}}{0.9515} \;\;\; \rightarrow \;\;\; \bar{S}=8.4821$$
+
+Finalmente, los limites para el gráfico S son:
+
+\begin{center}
+$LCS=\bar{S}+2.75\frac{\bar{S}}{c4}\sqrt{1-c4^2}=16.024$
+
+$LC=\bar{S}=8.4821$
+
+$LCI=\bar{S}-2.75\frac{\bar{S}}{c4}\sqrt{1-c4^2}=0.94$
+\end{center}
+
+Dado que el n y el k en ambos casos es de 6 y de 2.75 respectivamente, se asegura que en el gráfico S se mantiene el mismo nivel de error tipo I y el mismo tamaño de muestra
+
 \item[b.] Construir y comentar la curva característica de operación para el gráfico X barra asociado y su curva ARL. (evaluar en el rango 0 - 3.5 desviaciones estándar)
 
 ~\\Para construir la curva de operación, se calcularon las probabilidades de no detectar un cambio dado que el proceso está fuera de control, para diferentes magnitudes de cambio $r$ de 0 a 3.5\%. Estas probabilidades se calcularon mediante:
 $$\beta=P(No \;\; detectar \;\; un \;\; cambio | Fuera \;\; de \;\; control)$$ 
 $$\beta_r=P(Z<k-r\sqrt{n})-P(Z<-k-r\sqrt{n})$$
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{FigurasUV/CO.png}
+  \caption{Curva característica de operación($\beta_r$)}
+\end{figure}
 
+Para realizar más fácil la interpretación, se obtuvo y se graficó $1-\beta_r$ que es la probabilidad de detectar el cambio, dado que el proceso está fuera de control.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{FigurasUV/CO1.png}
+  \caption{Curva característica de operación($1-\beta_r$)}
+\end{figure}
+
+Para construir la curva ARL, se calculará para r entre 0 y 3.5:
+
+$$ARL_r=\frac{1}{p_r}=\left\{
+\begin{array}{r}
+     \frac{1}{\alpha} \;\;\; r=0  
+  \\ \frac{1}{1-\beta_r} \;\;\; r>0
+\end{array}
+\right.$$
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{FigurasUV/ARL.png}
+  \caption{Curva ARL}
+\end{figure}
 
 \item[c.] En determinado momento el proceso de llenado comienza a envasar botellas con un promedio de 984 cc. Evalué la probabilidad de que el gráfico detecte este cambio antes de 3 inspecciones.
 
