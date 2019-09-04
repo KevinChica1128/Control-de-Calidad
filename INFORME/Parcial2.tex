@@ -26,13 +26,6 @@
         code= 1525953,
         affiliation = Universidad del Valle,
         email = jose.alejandro.vargas@correounivalle.edu.co]
-\author[firstname = Alejandro,
-        surname = Soto,
-        numberinstitution = 1,
-        code= 1532457,
-        affiliation = Universidad del Valle,
-        email = asotomurillo@gmail.com]
-
 \end{authors}
 %
 \begin{institutions}
@@ -230,6 +223,8 @@ Para realizar más fácil la interpretación, se obtuvo y se graficó $1-\beta_r$ qu
   \caption{Curva característica de operación($1-\beta_r$)}
 \end{figure}
 
+Se puede apreciar que para cambios de una magnitud r baja, entre 0 y 0.7\%, la probabilidad de detectar cambios de este tipo está entre 0 y 0.2 de forma ascendente. Como es de esperarse, mientras más grande es la magnitud del cambio r, más alta es la probabilidad de que el gráfico de control lo detecte, por ejemplo, a partir de cambios de una magnitud r de 0.7\% hasta 1.5\%, la probabilidad de detectar el cambio crece casi que linealmente. Finalmente, estas probabilidades se estabilizan en 1, cuando la magnitud del cambio es mayor o igual a 2, esto quiere decir que cambios de estas magnitudes, siempre los detectará el gráfico de control.
+
 Para construir la curva ARL, se calculará para r entre 0 y 3.5:
 
 $$ARL_r=\frac{1}{p_r}=\left\{
@@ -245,17 +240,68 @@ $$ARL_r=\frac{1}{p_r}=\left\{
   \caption{Curva ARL}
 \end{figure}
 
+Con respecto al ARL (número promedio de observaciones que dejará pasar el gráfico antes de emitir una señal bajo un cambio de magnitud $r\sigma$, se observa en el gráfico, que cuando el proceso está bajo control, es decir, $r=0$, la frecuencia promedio de aparición de falsas alarmas es de aproximadamente 160 muestreos, mientras que cuando el proceso está fuera de control a una magnitud r baja (entre 0.1 y 0.6\%), la frecuencia promedio de detección del cambio va desde 140 muestreos en el mínimo ($r=0.1$) hasta 10 muestreos en el máximo ($r=0.6$), a partir de una magnitud de cambio de 0.9\% en adelante, la frecuencia promedio de detección del cambio se estabiliza en 0, es decir, que el cambio siempre se va a detectar.
+
 \item[c.] En determinado momento el proceso de llenado comienza a envasar botellas con un promedio de 984 cc. Evalué la probabilidad de que el gráfico detecte este cambio antes de 3 inspecciones.
+
+Para calcular la probabilidad de que el gráfico detecte un cambio en la media del proceso de una magnitud $r$, debemos calcular el complemento de:
+$$\beta=P(No \;\; detectar \;\; un \;\; cambio | Fuera \;\; de \;\; control)$$
+$$\beta_r=P(Z<k-r\sqrt{n})-P(Z<-k-r\sqrt{n})$$
+
+Debemos calcular la magnitud del cambio r que corresponde al cambio hasta 984 cc
+
+$$r=\frac{|\mu_1-\mu_0|}{\sigma_0}=\frac{|984-1005|}{8.9145}=2.35$$
+
+Obtenida la magnitud del cambio $r=2.35\%$, y tenemos que para $\alpha=0.006$, $k=2.75$. Por lo tanto:
+
+$$\beta_{2.35}=P(Z<2.75-2.35\cdot \sqrt{6})-P(Z<-2.75-2.35\cdot \sqrt{6})=P(Z<-3)-P(Z<-8.5)=0.00135-0=0.00135$$ 
+
+Entonces, la probabilidad de detectar el cambio será:
+
+$$1-\beta_{2.35}=1-0.00135=0.99865$$
+
+Finalmente, la probabilidad de que el gráfico detecte el cambio antes de 3 inspecciones (en 2 o menos) es, la probabilidad de que lo detecte en la primera más la probabilidad de que lo detecte en la segunda:
+
+$$(1-\beta_{2.35})+\beta_{2.35}(1-\beta_{2.35})=0.99865+(0.00135)(0.99865)=0.999998$$
+
+Se puede decir que como la magnitud del cambio es considerablemente grande, el gráfico lo detectará casi siempre (99.86\% de las veces) en la primera inspección, y casi el 100\% de las veces lo detectará antes de 3 inspecciones.
 
 \item[d.] Si se presenta un cambio como el enunciado en c, cuál sería el porcentaje de unidades no conformes que se producirían?, cuál sería el nuevo valor Cpk y Cp.
 
+Si se presenta un cambio como el enunciado en c, es decir, si $\mu$ pasa a ser 984 cc, el porcentaje de unidades no conformes que se producirían la podemos encontrar como el complemento de:
+
+$$P(970<\bar{x}<1030|\mu=984)=P(\bar{x}<1030|\mu=984)-P(\bar{x}<970|\mu=984)$$
+$$=P\left(Z<\frac{1030-984}{8.945/\sqrt{6}}\right)-P\left(Z<\frac{970-984}{8.945/\sqrt{6}}\right)$$
+$$=P(Z<12.64)-P(Z<-3.84)=1-0.00006=0.99994$$
+
+Entonces, se producirán $1-0.99994=0.00006$ unidades no conformes, es decir, se producirán 60 unidades no conformes por millón.
+
+El valor de Cp no cambia, ya que no depende de la media del proceso, este valor es:
+
+$$Cp=\frac{LSE-LIE}{6\sigma}=\frac{1030-970}{6(8.9145)}=1.1217$$
+
+Lo que nos estaría diciendo que el proceso es capaz con necesidad de vigilancia.
+
+El nuevo valor Cpk es:
+
+$$C_{pk}=Min(C_{pu},C_{pl})$$
+
+Donde:
+$$C_{pu}=\frac{LSE-\mu}{3\sigma}=\frac{1030-984}{3(8.9145)}=1.72$$
+
+$$C_{pl}=\frac{\mu-LIE}{3\sigma}=\frac{984-970}{3(8.9145)}=0.52$$
+
+Por tanto:
+
+$$C_{pk}=Min(1.72,0.52)=0.52$$
+
+Lo que nos indica que el proceso no cumple con por lo menos una de las especificaciones.
 \end{itemize}
 
 
 
 
 
-\section{Conclusión}
 
 
 
