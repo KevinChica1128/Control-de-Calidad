@@ -4,6 +4,7 @@
 \documentclass[english]{revcoles}
 \usepackage[top=1.5cm,bottom=1.5cm,left=3cm,right=3cm]{geometry}
 \usepackage[latin1]{inputenc}
+\usepackage{float}
 \usepackage{graphicx}
 %
 \hyphenation{}
@@ -71,18 +72,17 @@ Podemos observar que en el gráfico $\bar{x} - R$ para $\alpha=0.05$, tenemos tre
 Se puede notar que el gráfico con un nivel de significancia $\alpha=0.05$, genera limites más estrictos(estrechos) que su comparativo con $\alpha=0.0027$.
 
 \item[b.] Simule 1000 subgrupos bajo control, desde la distribución normal y evalué la significancia de forma empírica para cada gráfico.
-\\
-\\
-Con los datos dado en las tablas se estimaron los parámetros que se consideran corresponden a una distribución normal "bajo control", estos son:
+
+A partir de los gráficos de control del literal a, se extrayeron los parámetros que se consideran corresponden a una distribución normal ``bajo control'', estos son:
 
 \begin{table}[htbp]
 \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
-$\alpha$ & X-barra&R \\
+$\alpha$ & X-barra & $\bar{R}$ \\
 \hline \hline
-0.05 &5.48 & 9.18\\ \hline
-0.0027 & 5.59 &9.16\\ \hline
+0.05 &5.48 & 9.19\\ \hline
+0.0027 & 5.59 &9.17\\ \hline
 
 \end{tabular}
 \caption{Tabla para  medias.}
@@ -106,9 +106,8 @@ $\alpha$ & X-barra&R \\
 \end{center}
 \end{table}
 
-Con estos parámetros se simularon 1000 subgrupos, una simulación para cada gráfica de control y posterior a esto se procedió a evaluar de forma empírica la significacia; esto se logro contando el numero de simulaciones que se salieron de los limites de control LCI y LCS.
-\\
-\\
+Con estos parámetros se simularon 1000 subgrupos, una simulación para cada gráfica de control y posterior a esto se procedió a evaluar de forma empírica la significacia; esto se logró contando el número de simulaciones que se salieron de los limites de control LCI y LCS.
+
 Los resultados que se obtuvieron se presentan en la siguiente tabla:
 
 \begin{table}[htbp]
@@ -127,17 +126,17 @@ $\alpha-empirico$ & 0.001 &0.003\\ \hline
 \end{center}
 \end{table}
 
+\pagebreak
+Los comentarios se realizarán en el literal d.
+
 \item[c.] Simule 1000 subgrupos con un descentramiento de 2.5 desviaciones estándar, desde la distribución normal y evalué la potencia de forma empírica para cada gráfico.
-\\
-\\
-Para lograr simular datos con un descentramiento nos apoyamos en la magnitud del cambio,medido en unidades de desviación estándar, el cual viene dado por la formula:
+
+Para lograr simular datos con un descentramiento nos apoyamos en la magnitud del cambio, medido en unidades de desviación estándar, el cual viene dado por la formula:
 $$r=\frac{\mid \mu_1 - \mu_0\vert}{\sigma_0}$$
-\\
-\\
+
 Despejando $\mu_1$ (Descentramiento positivo)tenemos:
 $$\mu_1=(2.5*\sigma_0)+\mu_0$$
-\\
-\\
+
 Los promedios para cada gráfico están dados por:
 
 \begin{table}[htbp]
@@ -155,9 +154,9 @@ $\alpha$ & X-barra \\
 \end{center}
 \end{table}
 
-Una vez simuladas las poblaciones se cuenta el numero de simulaciones que cayeron dentro de los limites de control, esto quiere decir cuantas veces el gráfico no detecto el cambio dado que tenemos un proceso fuera de control; posteriormente calculamos la potencia que viene dada por $1-\beta$ esta nos indica la capacidad del gráfico para detectar correctamente procesos descontrolados.
+Una vez simuladas las poblaciones, se cuenta el número de valores simulados que cayeron dentro de los limites de control, esto significa, cuántas veces el gráfico no detecto el cambio dado que tenemos un proceso fuera de control; posteriormente calculamos la potencia que viene dada por $1-\beta$ esta nos indica la capacidad del gráfico para detectar correctamente procesos descontrolados.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \begin{center}
 \begin{tabular}{|l|l|}
 \hline
@@ -165,7 +164,6 @@ $\alpha$ & X-barra \\
 \hline \hline
 0.05 &0.999 \\ \hline
 0.0027 & 0.991 \\ \hline
-
 \end{tabular}
 \caption{Tabla potencias empíricas.}
 \label{tabla:sencilla}
@@ -175,10 +173,10 @@ $\alpha$ & X-barra \\
 \item[d.] Comente los resultados hallados en (b) y (c), contrastando con las significancias planeadas en (a) y con la potencias teóricas esperadas.
 \\
 \\
-Observamos que en el caso de las significancias para el promedio se obtuvieron empíricas muy similares, estas dieron como resultado 0.048 y 0.001 para una teórica de 0.05 y 0.0027 respectivamente, lo que quiere decir que de 1000 simulaciones 48 para una significancia de 0.0027 y 1 para la significancia de 0.05 se salieron de los limites de control. En el caso del rango tenemos que las significancias empíricas dieron muy similares a las teóricas siendo estas 0.046 y 0.003.
+Observamos que en el caso de las significancias para el promedio, se obtuvieron empíricas muy similares, estas dieron como resultado 0.048 y 0.001 para una teórica de 0.05 y 0.0027 respectivamente, lo que quiere decir que de 1000 simulaciones 48 para una significancia de 0.0027 y 1 para la significancia de 0.05 se salieron de los limites de control. En el caso del rango tenemos que las significancias empíricas dieron muy similares a las teóricas, siendo estas 0.046 y 0.003.
 \\
 \\
-Al realizar el calculo de la potencia de forma empírica nos dimos cuenta que pese a tener una significancia de 0.0027 la potencia para xbarra no deja de ser alto, por lo que podemos decir que el gráfico sigue siendo potente aun cuando tenemos significancian altas, esto significa que a la larga voy a tener los mínimos errores en mis hipótesis por lo que puedo estar casi seguro que muy rara vez mi gráfico se va a equivocar diagnosticando un proceso fuera de control como bueno y así mismo muy pocas veces se equivocará diciendo que mi proceso esta descontrolado cuando la realidad es que todo esta en orden, adicional a esto las potencias teóricas dieron como resultado 0.9952036 para un $K=3$ y 0.9998584 para un $K=1.96$.
+Al realizar el calculo de la potencia de forma empírica, nos dimos cuenta que pese a tener una significancia de 0.0027, la potencia para x-barra no deja de ser alta, por lo que podemos decir que el gráfico sigue siendo potente aun cuando tenemos significancia muy baja, esto significa que a la larga se va a tener errores mínimos en las hipótesis, por lo que podemos estar casi seguros que muy rara vez el gráfico se va a equivocar, diagnosticando un proceso fuera de control como bueno y así mismo, muy pocas veces se equivocará diciendo que el proceso esta descontrolado cuando la realidad es que todo esta en orden, adicional a esto, las potencias empíricas dieron como resultado 0.9952036 para un $K=3$ y 0.9998584 para un $K=1.96$.
 
 \item[e.] Con los datos suministrados en la tabla, determine que tan capaz es esta planta de suministrar agua con el estándar mínimo de calidad, si se sabe que para que una fuente de agua pueda ser potabilizada su contenido de plomo no debe ser superior a 10 ppm. Haga su evaluación en el corto y en el largo plazo (recuerde verificar los supuestos básicos del análisis de capacidad).
 
