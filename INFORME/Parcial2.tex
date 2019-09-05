@@ -179,6 +179,35 @@ Observamos que en el caso de las significancias para el promedio, se obtuvieron 
 Al realizar el calculo de la potencia de forma empírica, nos dimos cuenta que pese a tener una significancia de 0.0027, la potencia para x-barra no deja de ser alta, por lo que podemos decir que el gráfico sigue siendo potente aun cuando tenemos significancia muy baja, esto significa que a la larga se va a tener errores mínimos en las hipótesis, por lo que podemos estar casi seguros que muy rara vez el gráfico se va a equivocar, diagnosticando un proceso fuera de control como bueno y así mismo, muy pocas veces se equivocará diciendo que el proceso esta descontrolado cuando la realidad es que todo esta en orden, adicional a esto, las potencias empíricas dieron como resultado 0.9952036 para un $K=3$ y 0.9998584 para un $K=1.96$.
 
 \item[e.] Con los datos suministrados en la tabla, determine que tan capaz es esta planta de suministrar agua con el estándar mínimo de calidad, si se sabe que para que una fuente de agua pueda ser potabilizada su contenido de plomo no debe ser superior a 10 ppm. Haga su evaluación en el corto y en el largo plazo (recuerde verificar los supuestos básicos del análisis de capacidad).
+\\
+\\
+Primero verificamos si se cumple el supuesto de normalidad, para esto realizamos la prueba shapiro wilk la cual arrojo un p-valor de 0.0000326, adicional observamos el histograma de frecuencias donde claramente se observa que los datos no siguen una distribución normal.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.65]{FigurasUV/Histdeppm.png}
+  \caption{Histograma de ppm}
+\end{figure}
+
+Como mis datos no se distribuyen normalmente hay que optar por un calculo del indice de capacidad para datos no normales, por ende procedemos a evaluar que tipo de distribución es la que mejor se ajusta a mi conjunto de datos, se obtuvieron algunas de las mejores propuestas.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.3]{FigurasUV/CPW.png}
+  \caption{Indice de capacidad con Weibul}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.3]{FigurasUV/CPG.png}
+  \caption{Indice de capacidad con Gamma}
+\end{figure}
+
+Estas dos distribuciones son las que "mejor" se acomodan al conjunto de datos, sin embargo vemos que el Ppk dio menor que 1 (0.37 y 0.31 respectivamente) lo que me indica que el proceso no es capaz, esto quiere decir que la planta con este proceso no es capaz de potabilizar agua en donde el limite superior de ppm (contenido de plomo) sea 10.
+\\
+\\
+Observando el rendimiento a corto y largo plazo de partes por millón dados en las gráficas calculamos que en proporción aproximadamente el $0.14$ de mediciones de ppm  en el largo plazo se saldrán de este limite ($LES=10$) mientras que para el corto plazo esta proporción es de aproximadamente el $0.11$, estos porcentajes son muy altos ya que de 100 veces 14 el proceso no sera capaz de potabilizar el agua.
 
 \end{itemize}
 
