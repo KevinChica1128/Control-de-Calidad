@@ -181,7 +181,7 @@ Al realizar el calculo de la potencia de forma empírica, nos dimos cuenta que pe
 \item[e.] Con los datos suministrados en la tabla, determine que tan capaz es esta planta de suministrar agua con el estándar mínimo de calidad, si se sabe que para que una fuente de agua pueda ser potabilizada su contenido de plomo no debe ser superior a 10 ppm. Haga su evaluación en el corto y en el largo plazo (recuerde verificar los supuestos básicos del análisis de capacidad).
 \\
 \\
-Primero verificamos si se cumple el supuesto de normalidad, para esto realizamos la prueba shapiro wilk la cual arrojo un p-valor de 0.0000326, adicional observamos el histograma de frecuencias donde claramente se observa que los datos no siguen una distribución normal.
+Primero verificamos si se cumple el supuesto de normalidad, para esto realizamos la prueba Shapiro Wilk, la cual arrojo un p-valor de 0.0000326, adicionalmente, observamos el histograma de frecuencias, donde claramente se aprecia que los datos no siguen una distribución normal.
 
 \begin{figure}[h!]
   \centering
@@ -189,7 +189,7 @@ Primero verificamos si se cumple el supuesto de normalidad, para esto realizamos
   \caption{Histograma de ppm}
 \end{figure}
 
-Como mis datos no se distribuyen normalmente hay que optar por un calculo del indice de capacidad para datos no normales, por ende procedemos a evaluar que tipo de distribución es la que mejor se ajusta a mi conjunto de datos, se obtuvieron algunas de las mejores propuestas.
+Como mis datos no se distribuyen normalmente hay que optar por un calculo del indice de capacidad para datos no normales, por ende procedemos a evaluar qué tipo de distribución es la que mejor se ajusta a mi conjunto de datos, se obtuvieron algunas de las mejores propuestas.
 
 \begin{figure}[h!]
   \centering
@@ -204,10 +204,11 @@ Como mis datos no se distribuyen normalmente hay que optar por un calculo del in
   \caption{Indice de capacidad con Gamma}
 \end{figure}
 
-Estas dos distribuciones son las que "mejor" se acomodan al conjunto de datos, sin embargo vemos que el Ppk dio menor que 1 (0.37 y 0.31 respectivamente) lo que me indica que el proceso no es capaz, esto quiere decir que la planta con este proceso no es capaz de potabilizar agua en donde el limite superior de ppm (contenido de plomo) sea 10.
+\pagebreak
+Estas dos distribuciones son las que ``mejor'' se acomodan al conjunto de datos, sin embargo vemos que el $P_{pk}$ dio menor que 1 (0.37 y 0.31 respectivamente), lo que indica que el proceso no es capaz, esto quiere decir que la planta con este proceso no es capaz de suministrar agua con el estándar mínimo de calidad.
 \\
 \\
-Observando el rendimiento a corto y largo plazo de partes por millón dados en las gráficas calculamos que en proporción aproximadamente el $0.14$ de mediciones de ppm  en el largo plazo se saldrán de este limite ($LES=10$) mientras que para el corto plazo esta proporción es de aproximadamente el $0.11$, estos porcentajes son muy altos ya que de 100 veces 14 el proceso no sera capaz de potabilizar el agua.
+Observando el rendimiento a corto y largo, en las gráficas se observa que en proporción, aproximadamente el $0.14$ de mediciones de ppm  en el largo plazo se saldrán de este limite ($LES=10$), mientras que para el corto plazo, ésta proporción es de aproximadamente el $0.11$, estos porcentajes son muy altos ya que de 100 veces, en 14 de ellas el proceso no será capaz de potabilizar el agua.
 
 \end{itemize}
 
@@ -296,6 +297,7 @@ Dado que el n y el k en ambos casos es de 6 y de 2.75 respectivamente, se asegur
 $$\beta=P(No \;\; detectar \;\; un \;\; cambio | Fuera \;\; de \;\; control)$$ 
 $$\beta_r=P(Z<k-r\sqrt{n})-P(Z<-k-r\sqrt{n})$$
 
+\pagebreak
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.6]{FigurasUV/CO.png}
@@ -329,6 +331,7 @@ $$ARL_r=\frac{1}{p_r}=\left\{
 
 Con respecto al ARL (número promedio de observaciones que dejará pasar el gráfico antes de emitir una señal bajo un cambio de magnitud $r\sigma$, se observa en el gráfico, que cuando el proceso está bajo control, es decir, $r=0$, la frecuencia promedio de aparición de falsas alarmas es de aproximadamente 160 muestreos, mientras que cuando el proceso está fuera de control a una magnitud r baja (entre 0.1 y 0.6\%), la frecuencia promedio de detección del cambio va desde 140 muestreos en el mínimo ($r=0.1$) hasta 10 muestreos en el máximo ($r=0.6$), a partir de una magnitud de cambio de 0.9\% en adelante, la frecuencia promedio de detección del cambio se estabiliza en 0, es decir, que el cambio siempre se va a detectar.
 
+\pagebreak
 \item[c.] En determinado momento el proceso de llenado comienza a envasar botellas con un promedio de 984 cc. Evalué la probabilidad de que el gráfico detecte este cambio antes de 3 inspecciones.
 
 Para calcular la probabilidad de que el gráfico detecte un cambio en la media del proceso de una magnitud $r$, debemos calcular el complemento de:
